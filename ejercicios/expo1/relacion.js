@@ -6,7 +6,7 @@ const resultadoMap = notas.map(n => n * 2);
 console.log('MAP → transforma:', resultadoMap);
 
 // FILTER
-const resultadoFilter = notas.filter(n => n <= 3);
+const resultadoFilter = notas.filter(n => n >= 3);
 console.log('FILTER → selecciona:', resultadoFilter);
 
 // SUBSCRIBE
