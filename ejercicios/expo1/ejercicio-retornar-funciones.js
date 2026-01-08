@@ -8,12 +8,11 @@ function crearsaludo(saludo){
 
 }
 /* Crear variables const para obtener el saludo */
-const saludo1 = crearsaludo("Hola buenos dias")/* ("Carlos") */
+const saludo1 = crearsaludo("Hola buenos dias")("Carlos")
 const saludo2 = crearsaludo("Bienvenid@")/* ("Anabell") */
 const saludo3 = crearsaludo("Feliz dia")/* ("Ana") */
 
 /* Se usan las funciones */
-saludo1("Luis")
 saludo2("Pedro")
 saludo3("Marta")
 
