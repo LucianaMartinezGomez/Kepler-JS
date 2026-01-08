@@ -3,7 +3,7 @@ const sumar = (a, b) => a + b;
 
 // 2. La función que recibe el valor (la lógica)
 function calculadora(operacion) {
-    let resultado = operacion(5, 10); 
+    let resultado = operacion(15, 10); 
     return resultado + 10;
 }
 

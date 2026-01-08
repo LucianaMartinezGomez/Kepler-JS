@@ -18,7 +18,7 @@ function finalizarBusqueda(encontrado) {
 }
 
 // 3. Ejecución del flujo
-buscarPais("Alemania", baseDatos1, (encontradoEn1, nombre) => {
+buscarPais("Canada", baseDatos1, (encontradoEn1, nombre) => {
     if (encontradoEn1) {
         // Si está en la primera, esperamos y finalizamos
         setTimeout(() => finalizarBusqueda(true), 2000);
@@ -32,4 +32,34 @@ buscarPais("Alemania", baseDatos1, (encontradoEn1, nombre) => {
         }, 3000);
     }
 });
+
+
+
+
+// 1. Unimos todo usando el operador Spread (Ciudadanos de primera clase en acción)
+//const todasLasBD = [...baseDatos1, ...baseDatos2];
+
+// 2. Función de Orden Superior para buscar con filtros personalizados
+//const filtrarPaises = (lista, criterioBusqueda) => {
+    // .filter es una HOF que recibe una función de prueba (callback)
+   // return lista.filter(pais => pais.toLowerCase().includes(criterioBusqueda.toLowerCase()));
+//};
+
+// 3. Transformación con .map() 
+// Imagina que queremos normalizar todos los nombres a Mayúsculas antes de mostrar
+//const normalizarYMostrar = (lista) => {
+    //return lista.map(pais => ` País registrado: ${pais.toUpperCase()}`);
+//};
+
+// --- EJECUCIÓN ---
+//const busqueda = "an"; // Queremos países que contengan "an" (Canada, Argentina, Iran, Alemania, Inglaterra)
+
+//const resultados = filtrarPaises(todasLasBD, busqueda);
+//const listaFinal = normalizarYMostrar(resultados);
+
+//console.log(`Resultados para "${busqueda}":`);
+//listaFinal.forEach(p => console.log(p));
+
+
+
 
