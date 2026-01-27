@@ -13,14 +13,29 @@ btnAgregar.addEventListener('click', (evento)=>{
         const li = document.createElement('li')
         const btnEliminar = document.createElement('button')
 
+        li.classList.add('item-nota')
+        btnEliminar.classList.add('btn-eliminar')
+
         li.textContent = nuevaNota
         btnEliminar.textContent = 'Eliminar'
         li.appendChild(btnEliminar)
         listaNotas.appendChild(li)
         inputNota.value = ''
 
+        console.log("Nota agregada 👌")
+
         btnEliminar.addEventListener('click', ()=>{
             listaNotas.removeChild(li)
+            console.log("Nota Eliminada 👌")
+
         })
     }
 })
+
+let notas = JSON.parse(localStorage.getItem('notas') || [])
+
+function guardarNotas(){
+    localStorage.setItem("notas", JSON.stringify(notas))
+    notas.push(nuevaNota)
+    guardarNotas()
+}
